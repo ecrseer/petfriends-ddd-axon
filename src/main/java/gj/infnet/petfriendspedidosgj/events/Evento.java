@@ -1,10 +1,15 @@
 package gj.infnet.petfriendspedidosgj.events;
 
-public class Evento<T> {
+import gj.infnet.petfriendspedidosgj.infra.IdUnico;
 
-    private T id;
+public class Evento {
 
-    public Evento(T id){
+    private String id;
+
+    public Evento(){
+        this.id=IdUnico.criar();
+    }
+    public Evento(String id){
         this.id = id;
     }
 }

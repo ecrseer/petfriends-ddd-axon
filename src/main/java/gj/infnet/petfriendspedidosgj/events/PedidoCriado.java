@@ -1,7 +1,12 @@
 package gj.infnet.petfriendspedidosgj.events;
 
-public class PedidoCriado extends Evento<Long> {
-    public PedidoCriado(Long id) {
-        super(id);
+import gj.infnet.petfriendspedidosgj.domain.Pedido;
+
+public class PedidoCriado extends Evento {
+
+    public Pedido.PedidoStatus status;
+    public PedidoCriado() {
+        super();
+        this.status= Pedido.PedidoStatus.NOVO;
     }
 }
