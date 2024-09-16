@@ -30,7 +30,7 @@ public class Pedido  {
     private Long clienteId;
     private PedidoStatus status;
 
-//    private String status;
+
 
     public enum PedidoStatus {
         NOVO, FECHADO, CANCELADO, ENVIADO
