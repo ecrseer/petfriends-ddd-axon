@@ -1,5 +1,6 @@
 package gj.infnet.petfriendspedidosgj;
 
+import gj.infnet.petfriendspedidosgj.controller.PedidoQueryController;
 import gj.infnet.petfriendspedidosgj.domain.Pedido;
 import gj.infnet.petfriendspedidosgj.service.PedidoService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -13,6 +14,9 @@ public class PetfriendsPedidosGjApplication implements CommandLineRunner {
     @Autowired
     PedidoService pedidoService;
 
+    @Autowired
+    PedidoQueryController pedidoQueryController;
+
     public static void main(String[] args) {
         SpringApplication.run(PetfriendsPedidosGjApplication.class, args);
     }
@@ -21,5 +25,5 @@ public class PetfriendsPedidosGjApplication implements CommandLineRunner {
     public void run(String... args) throws Exception {
         pedidoService.criarPedido(new Pedido());
         System.out.println("\n-------uepan");
-    }
+  }
 }
