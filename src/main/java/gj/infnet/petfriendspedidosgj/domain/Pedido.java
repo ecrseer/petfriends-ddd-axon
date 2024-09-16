@@ -28,6 +28,7 @@ public class Pedido  {
     @Temporal(TemporalType.DATE)
     private Date dataPedido;
     private Long clienteId;
+    private String transporteId;
     private PedidoStatus status;
 
 
