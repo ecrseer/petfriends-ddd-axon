@@ -30,6 +30,8 @@ public class Pedido  {
     private Long clienteId;
     private PedidoStatus status;
 
+//    private String status;
+
     public enum PedidoStatus {
         NOVO, FECHADO, CANCELADO, ENVIADO
     }
@@ -40,7 +42,8 @@ public class Pedido  {
     }
 
     @EventSourcingHandler
-    public void on(PedidoCriado evento){
+    protected void on(PedidoCriado evento){
+        this.id=evento.id;
         this.status=evento.status;
     }
 
